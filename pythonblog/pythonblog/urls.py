@@ -21,14 +21,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from django.http.response import HttpResponse
+from pythonblog.controller import home, room
 
-
-def home(request):
-    return HttpResponse ('HELLO WORLD')
-
-def room(request, room_id):
-    return HttpResponse("this is a room detail" + room_id)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
