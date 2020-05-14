@@ -21,13 +21,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from pythonblog.controller import home, room
+from pythonblog.views import home, room
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('', home),
+    path('', home), 
 
     path('rooms/<room_id>', room)
 ]
