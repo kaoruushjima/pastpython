@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'pythonblog', #장고 텝플릿을 이용할 준비 , application  이름
 ]
 
 MIDDLEWARE = [

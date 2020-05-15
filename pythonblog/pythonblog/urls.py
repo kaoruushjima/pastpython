@@ -21,7 +21,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from pythonblog.views import home, room
+from pythonblog.views import home
 
 
 urlpatterns = [
@@ -29,5 +29,4 @@ urlpatterns = [
 
     path('', home), 
 
-    path('rooms/<room_id>', room)
 ]

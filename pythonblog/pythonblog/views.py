@@ -1,7 +1,13 @@
+import requests
+
 from django.http.response import HttpResponse
+from django.template import loader
 
 def home(request):
-    return HttpResponse ('HELLO WORLD')
-
-def room(request, room_id):
-    return HttpResponse("this is a room detail " + room_id)
+    template = loader.get_template("home.html")
+    return HttpResponse(
+        template.render(
+            {"site_name" : "Python Blog"},
+            request,
+        )
+    )
