@@ -33,6 +33,8 @@ urlpatterns = [
     path('about/', about, name="about"),
 
     path('policy/', include('pythonblog.urls.policy')),
+
+    path('posts/', include('pythonblog.urls.posts')),
 ]
 
 if settings.DEBUG:
