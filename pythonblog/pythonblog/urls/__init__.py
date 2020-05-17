@@ -31,9 +31,6 @@ urlpatterns = [
 
     path('about/', about, name="about"),
 
-    path('policy/', include('pythonblog.urls.policy', namespace='policy')),
-    #     path('terms/', terms, name="terms"),
-    #     path('privacy/', privacy, name="privacy"),
-    #     path('disclaimer/', disclaimer, name="disclaimer"),
-    # ], namespace='policy')),
+    path('policy/', include('pythonblog.urls.policy')),
+     
 ]
