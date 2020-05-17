@@ -30,4 +30,8 @@ urlpatterns = [
     path('', home, name="home"), 
 
     path('about/', about, name="about"),
+    
+    path('policy/terms', terms, name="terms"),
+    path('policy/privacy', privacy, name="privacy"),
+    path('policy/disclaimer', disclaimer, name="disclaimer"),
 ]
