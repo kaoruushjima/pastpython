@@ -35,6 +35,8 @@ urlpatterns = [
     path('policy/', include('pythonblog.urls.policy')),
 
     path('posts/', include('pythonblog.urls.posts')),
+
+    path('naver-posts/', naver_posts_list, name="naver-posts"),
 ]
 
 if settings.DEBUG:
