@@ -2,3 +2,4 @@
 ipython
 django-debug-toolbar
 pycodestyle
+django-extensions
