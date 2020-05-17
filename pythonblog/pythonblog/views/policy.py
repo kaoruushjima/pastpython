@@ -7,11 +7,13 @@ def terms(request):
         "terms.html",
     )
 
+
 def privacy(request):
     return render(
         request,
         "privacy.html",
     )
+
 
 def disclaimer(request):
     return render(

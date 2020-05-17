@@ -5,5 +5,5 @@ def home(request):
     return render(
         request,
         "home.html",
-        {"site_name" : "Python Blog "}
+        {"site_name": "Python Blog"}
     )

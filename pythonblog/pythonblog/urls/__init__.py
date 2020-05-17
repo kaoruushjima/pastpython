@@ -14,10 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-#MVC 
-#M_MODEL : DB ( DATA ) & BUSINESS LOGIC ( * ) -> 더 무겁게
-#V_VIEW : HTML, CASS, ... => Template/Client
-#C_CONTROLLER : VIEW, MODEL 이어주는   -> 더 가볍게 ( 즉, 기능이 Controller => Model ..)
+# MVC
+# M_MODEL : DB ( DATA ) & BUSINESS LOGIC ( * ) -> 더 무겁게
+# V_VIEW : HTML, CASS, ... => Template/Client
+# C_CONTROLLER : VIEW, MODEL 이어주는   -> 더 가볍게 ( 즉, 기능이 Controller => Model ..)
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -28,12 +28,11 @@ from pythonblog.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('', home, name="home"), 
+    path('', home, name="home"),
 
     path('about/', about, name="about"),
 
     path('policy/', include('pythonblog.urls.policy')),
-     
 ]
 
 if settings.DEBUG:
