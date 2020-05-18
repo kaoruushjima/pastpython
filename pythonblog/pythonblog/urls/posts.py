@@ -1,15 +1,15 @@
 from django.urls import path, include
 
-from pythonblog.views import *
+from pythonblog.views.posts import *
 
 
 app_name = 'posts'
 urlpatterns = [
-    path('', list, name="post-list"),
-    path('<int:post_id>/', detail, name="post-detail"),
-    path('create/', create, name="post-create"),
-    path('new/', new, name="post-new"),
-    path('<int:post_id>/edit/', edit, name="post-edit"),
-    path('<int:post_id>/update/', update, name="post-update"),
-    path('<int:post_id>/delete/', delete, name="post-delete"),
+    path('', list, name="list"),
+    path('<int:post_id>/', detail, name="detail"),
+    path('create/', create, name="create"),
+    path('new/', new, name="new"),
+    path('<int:post_id>/edit/', edit, name="edit"),
+    path('<int:post_id>/update/', update, name="update"),
+    path('<int:post_id>/delete/', delete, name="delete"),
 ]
