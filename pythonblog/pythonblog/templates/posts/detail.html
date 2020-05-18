@@ -5,4 +5,9 @@
 <h1>Posts Detail</h1>
     <h2>{{ post.title }}</h2>
     <p>{{ post.content }}</p>
+
+<ul>
+    <li><a href="/posts/{{ post.id }}/edit/">Edit</a></li>
+    <li><a href="/posts/{{ post.id }}/delete/">Delete</a></li>
+</ul>
 {% endblock %}
