@@ -5,7 +5,7 @@ from django.urls import reverse
 # Post Class로만 접근이 가능
 class PostgManager(models.Manager):
 
-    def public(self):
+    def public(self):  # self -> 클래스로부터 만들어진 객체 자기자신
         return self.filter(is_public=True)
 
 
