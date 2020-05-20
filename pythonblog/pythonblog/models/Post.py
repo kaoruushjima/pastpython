@@ -2,7 +2,13 @@ from django.db import models
 from django.urls import reverse
 
 
+class PostgManager(models.Manager):
+    pass
+
+
 class Post(models.Model):
+
+    objects = PostgManager()
 
     title = models.CharField(
         max_length=120,
