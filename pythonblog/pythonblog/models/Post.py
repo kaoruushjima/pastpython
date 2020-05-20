@@ -2,8 +2,11 @@ from django.db import models
 from django.urls import reverse
 
 
+# Post Class로만 접근이 가능
 class PostgManager(models.Manager):
-    pass
+
+    def public(self):
+        return self.filter(is_public=True)
 
 
 class Post(models.Model):
