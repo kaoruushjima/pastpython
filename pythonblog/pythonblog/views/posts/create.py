@@ -12,4 +12,5 @@ def create(request):
         content=content,
     )
 
-    return redirect(f'/posts/{post.id}')
+    # return redirect(f'/posts/{post.id}')
+    return redirect(post)
