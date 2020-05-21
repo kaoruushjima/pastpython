@@ -20,6 +20,7 @@ Including another URLconf
 # C_CONTROLLER : VIEW, MODEL 이어주는   -> 더 가볍게 ( 즉, 기능이 Controller => Model ..)
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
 from django.conf import settings
 
 from pythonblog.views import *
@@ -37,7 +38,7 @@ urlpatterns = [
     path('posts/', include('pythonblog.urls.posts')),
 
     path('naver-posts/', naver_posts_list, name="naver-posts"),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     import debug_toolbar
