@@ -37,6 +37,8 @@ urlpatterns = [
 
     path('posts/', include('pythonblog.urls.posts')),
 
+    path('auth/', include('pythonblog.urls.auth')),
+
     path('naver-posts/', naver_posts_list, name="naver-posts"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
