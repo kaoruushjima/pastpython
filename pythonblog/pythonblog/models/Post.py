@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 
 # Post Class로만 접근이 가능
@@ -12,6 +13,9 @@ class PostgManager(models.Manager):
 class Post(models.Model):
 
     objects = PostgManager()
+
+    # 같은 application 내에 있지 않기 때문 "User"라고 쓰지 못한다.
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     title = models.CharField(
         max_length=120,
