@@ -1,0 +1,8 @@
+from django.contrib import admin
+
+from pythonblog.models import Post, Comment, NaverPost
+
+
+admin.site.register(Post)
+admin.site.register(Comment)
+admin.site.register(NaverPost)
