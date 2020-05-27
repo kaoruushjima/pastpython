@@ -8,6 +8,7 @@ def comments_create(request, post_id):
 
     post = Post.objects.get(id=post_id)
     comment = post.comment_set.create(
+        user=request.user,
         content=content,
     )
 
