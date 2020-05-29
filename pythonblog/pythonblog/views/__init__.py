@@ -1,4 +1,4 @@
-from .home import home
+from .home import HomeView
 from .about import about
 from .policy import terms, privacy, disclaimer
 from .posts import *

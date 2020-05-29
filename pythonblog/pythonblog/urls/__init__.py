@@ -29,7 +29,7 @@ from pythonblog.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('', home, name="home"),
+    path('', HomeView.as_view(), name="home"),
 
     path('about/', about, name="about"),
 
