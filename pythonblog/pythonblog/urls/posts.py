@@ -5,7 +5,7 @@ from pythonblog.views.posts import *
 
 app_name = 'posts'
 urlpatterns = [
-    path('', list, name="list"),
+    path('', PostListView.as_view(), name="list"),
     path('<int:post_id>/', detail, name="detail"),
     path('create/', create, name="create"),
     path('new/', new, name="new"),
