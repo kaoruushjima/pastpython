@@ -2,3 +2,4 @@ django==3.0.6
 requests
 beautifulsoup4
 Pillow
+hashids
