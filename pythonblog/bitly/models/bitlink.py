@@ -3,6 +3,8 @@ from django.db import models
 from django.urls import reverse
 from django.db.models.signals import post_save
 
+from hashids import Hashids
+
 
 class Bitlink(models.Model):
 
@@ -32,7 +34,8 @@ class Bitlink(models.Model):
 
 def post_save_bitlink(sender, instance, created, **kwargs):
     if created:
-        instance.shorten_hash = "zzzz"
+        hashids = Hashids(salt="awesome", min_length=4)
+        instance.shorten_hash = hashids.encode(instance.id)
         instance.save()
 
 
